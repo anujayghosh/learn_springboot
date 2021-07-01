@@ -1,0 +1,7 @@
+Flow:
+
+Client calls home page
+We tag home -> (pages/)home(.jsp) inside Controller file(application.properties)
+Client sends a request -> We accept it and store it in req ->put it in a string 
+HttpSession for setting attributes from string -> JSTL/EL used ${} in JSP to refer to the attribute by their keys.
+Value gets pasted on Home.jsp

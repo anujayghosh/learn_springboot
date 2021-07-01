@@ -1,0 +1,7 @@
+#controller will refer to JSP file inside pages folder
+spring.mvc.view.prefix=/pages/
+spring.mvc.view.suffix=.jsp
+
+#General properties
+spring.application.name=WebAppDemo
+server.port = 8080
