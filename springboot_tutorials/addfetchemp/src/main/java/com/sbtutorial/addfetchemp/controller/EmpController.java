@@ -38,4 +38,19 @@ public class EmpController {
 		mv.addObject(employee);
 		return mv;
 	}
+	
+	@RequestMapping("/updateEmp")
+	public String updateEmp(Employee employee)
+	{
+		employeeDAO.deleteById(employee.getEid());
+		employeeDAO.save(employee);
+		return "home.jsp";
+	}
+	
+	@RequestMapping("/deleteEmp")
+	public String deleteEmp(@RequestParam int eid)
+	{
+		employeeDAO.deleteById(eid);
+		return "home.jsp";
+	}
 }
