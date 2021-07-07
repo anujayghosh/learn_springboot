@@ -17,6 +17,7 @@ public class WebConfig implements WebMvcConfigurer{
 		//set path extension to true - depreciated to discourage path extension as method of content negotiation
 		//favorPathExtension(true).
 		configurer.favorParameter(true).
+		parameterName("mediaType").
 		ignoreAcceptHeader(true).
 		defaultContentType(MediaType.APPLICATION_JSON).
 		mediaType("xml", MediaType.APPLICATION_XML).
