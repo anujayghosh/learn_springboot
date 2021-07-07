@@ -47,15 +47,15 @@ public class HomeController {
  * Using @RequestParam("")
  * Using ModelAndView 
  */
-//	@RequestMapping("home")
-//	public ModelAndView home(@RequestParam("name") String myName)
-//	{
-//		ModelAndView mv = new ModelAndView();
-//		mv.addObject("name",myName);
-//		mv.setViewName("home");
-//			
-//		return mv;
-//	}
+	@RequestMapping("home")
+	public ModelAndView home(@RequestParam("name") String myName)
+	{
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("name",myName);
+		mv.setViewName("home");
+			
+		return mv;
+	}
 /**
  * WITHOUT Using HttpServletRequest
  * WITHOUT Creating a session using HttpSession and then passing data+view
@@ -63,13 +63,14 @@ public class HomeController {
  * Using ModelAndView 
  */
 	
-	@RequestMapping("home")
-	public ModelAndView home(Employee employee)
-	{
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("ob",employee);
-		mv.setViewName("home");
-			
-		return mv;
-	}
+//	@RequestMapping("home")
+//	public ModelAndView home(Employee employee)
+//	{
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("ob",employee);
+//		mv.setViewName("home");
+//			
+//		return mv;
+//	}
+	
 }

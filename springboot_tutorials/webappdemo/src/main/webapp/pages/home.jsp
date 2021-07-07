@@ -7,7 +7,12 @@
 <title>WebAppDemo</title>
 </head>
 <body>
+
 <p>This is a Web App Spring Boot Application Demo</p>
-<p>Hi ${ob.eid}, ${ob.ename}, ${ob.language}!</p>
+<p></p>
+<p>Hi ${ob.ename}!</p>
+<p> Your ID is:  ${ob.eid}</p>
+<p> Your primary skill/language is:  ${ob.language}!</p>
+
 </body>
 </html>
