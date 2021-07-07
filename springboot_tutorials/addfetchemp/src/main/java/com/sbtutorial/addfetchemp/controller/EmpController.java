@@ -1,8 +1,12 @@
 package com.sbtutorial.addfetchemp.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.sbtutorial.addfetchemp.dao.EmployeeDAO;
 import com.sbtutorial.addfetchemp.model.Employee;
@@ -24,5 +28,14 @@ public class EmpController {
 	{
 		employeeDAO.save(employee);
 		return "home.jsp";
+	}
+	
+	@RequestMapping("/fetchEmp")
+	public ModelAndView fetchEmp(@RequestParam int eid)
+	{
+		ModelAndView mv = new ModelAndView("showEmployee.jsp");
+		Employee employee = employeeDAO.findById(eid).orElse(new Employee());
+		mv.addObject(employee);
+		return mv;
 	}
 }
