@@ -12,7 +12,8 @@ public class EmployeeController {
 	
 	/**
 	 * Accept Header method:
-	 * Use "Accept" Header in HTTP Request with "application/xml" or "application/json" and remove WebConfig.java from codebase
+	 * Use "Accept" Header in HTTP Request with "application/xml" or "application/json" 
+	 * and edit WebConfig.java to select Accept Header and ignore parameter method
 	 * Returns output based on Accept Header.
 	 */
 
