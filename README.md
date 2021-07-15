@@ -3,7 +3,7 @@
  <img height=150px src="resources/images/springboot-logo.png" alt="Project logo"></a>
 </p>
 
-<h2 align="center">Learn Spring Boot</h2>
+<h3 align="center">Learn Spring Boot</h3>
 
 <div align="center">
 
