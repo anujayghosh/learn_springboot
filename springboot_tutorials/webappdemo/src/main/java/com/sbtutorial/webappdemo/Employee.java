@@ -1,7 +1,5 @@
 package com.sbtutorial.webappdemo;
 
-import org.springframework.beans.factory.annotation.Value;
-
 public class Employee {
 	
 	private int eid;
