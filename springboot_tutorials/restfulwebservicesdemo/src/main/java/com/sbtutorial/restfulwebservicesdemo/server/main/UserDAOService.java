@@ -17,11 +17,11 @@ public class UserDAOService
 	static  
 	{  
 		//adding users to the list  
-		users.add(new User(1, "John", new Date()));  
-		users.add(new User(2, "Robert", new Date()));  
-		users.add(new User(3, "Adam", new Date()));  
-		users.add(new User(4, "Andrew", new Date()));  
-		users.add(new User(5, "Jack", new Date()));  
+		users.add(new User(1, "Anujay", new Date()));  
+		users.add(new User(2, "Rishitha", new Date()));  
+		users.add(new User(3, "Varun", new Date()));  
+		users.add(new User(4, "Manisha", new Date()));  
+		users.add(new User(5, "Arpita", new Date()));  
 	}  
 	//method that retrieve all users from the list  
 	public List<User> findAll()  

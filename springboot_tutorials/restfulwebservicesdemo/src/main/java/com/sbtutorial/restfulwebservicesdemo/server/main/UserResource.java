@@ -19,13 +19,13 @@ public class UserResource {
 	private UserDAOService service;
 
 	@GetMapping("/users")
-	public List<User> retriveAllUsers() {
+	public List<User> retrieveAllUsers() {
 		return service.findAll();
 	}
 
 //retrieves a specific user detail  
 	@GetMapping("/users/{id}")
-	public User retriveUser(@PathVariable int id) {
+	public User retrieveUser(@PathVariable int id) {
 		return service.findOne(id);
 	}
 	
