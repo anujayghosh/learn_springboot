@@ -18,21 +18,10 @@ public class SbJdbcController {
 	 @Autowired
 	 UserService userService;
 
-//	@Autowired
-//	JdbcTemplate jdbc;
-
-//	
-//	@RequestMapping("/insert")  
-//	public String insertUserC(){  
-//		jdbc.execute("insert into user(name,email)values('Anujay','anujay.sanjoy.ghosh@accenture.com')");  
-//		return "Data Inserted Successfully";  
-//	}
-//	
 	@RequestMapping("/truncate")  
 	public String 
 		truncate(){  
 		userService.truncateUser();
-//		jdbc.execute("truncate user;");  
 		return "User Table Data Truncated Successfully";  
 	}
 	
@@ -46,8 +35,6 @@ public class SbJdbcController {
 	   		update(@PathVariable("id") String id, @RequestBody User user) {
 	      
 	     userService.updateUser(id, user);
-//	     jdbc.execute(String.format("delete from user where id=%s",id));
-//	     jdbc.execute(String.format("insert into user(id,name,email)values('%s','%s','%s')",id,user.getName(),user.getEmail()));
 	      return new ResponseEntity<>("User is updated successsfully", HttpStatus.OK);
 	   }
 	   
@@ -55,7 +42,6 @@ public class SbJdbcController {
 	   public ResponseEntity<Object> 
 	   		delete(@PathVariable("id") String id) {
 	      userService.deleteUser(id);
-//	      jdbc.execute(String.format("delete from user where id=%s",id));
 	      return new ResponseEntity<>("User is deleted successsfully", HttpStatus.OK);
 	   }
 	
@@ -63,7 +49,6 @@ public class SbJdbcController {
 	   public ResponseEntity<Object> 
 			create(@RequestBody User user) {
 	      userService.createUser(user);
-//	      jdbc.execute(String.format("insert into user(id,name,email)values('%s','%s','%s')",user.getId(),user.getName(),user.getEmail()));
 	      return new ResponseEntity<>("User is created successfully", HttpStatus.CREATED);
 	   }
 }

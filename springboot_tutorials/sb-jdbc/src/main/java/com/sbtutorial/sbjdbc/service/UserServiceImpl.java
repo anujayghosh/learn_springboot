@@ -17,20 +17,6 @@ public class UserServiceImpl implements UserService{
 	private static Map<String, User> userRepo = new HashMap<>();
 	@Autowired
 	JdbcTemplate jdbc;
-//	   static {
-//	      User varun = new User();
-//	      varun.setId("1");
-//	      varun.setName("Varun");
-//	      varun.setEmail("varun@accenture.com");
-//	      userRepo.put(varun.getId(), varun);
-//
-//	      User rishitha = new User();
-//	      rishitha.setId("2");
-//	      rishitha.setName("Rishitha");
-//	      rishitha.setEmail("rishitha@accenture.com");
-//	      userRepo.put(rishitha.getId(), rishitha);
-//	   }
-	
 
 	   @Override
 	   public void createUser(User user) {
