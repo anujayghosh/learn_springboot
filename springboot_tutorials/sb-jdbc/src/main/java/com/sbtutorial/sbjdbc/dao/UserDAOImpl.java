@@ -12,11 +12,11 @@ import com.sbtutorial.sbjdbc.model.User;
 
 @Repository
 public class UserDAOImpl implements UserDAO{
-	
+
 	private static Map<String, User> userRepo = new HashMap<>();
 	@Autowired
 	JdbcTemplate jdbc;
-	
+
 	public void createUser(User user) {
 		userRepo.put(user.getId(), user);
 		jdbc.execute(String.format("insert into user(id,name,email)values('%s','%s','%s')",user.getId(),user.getName(),user.getEmail()));

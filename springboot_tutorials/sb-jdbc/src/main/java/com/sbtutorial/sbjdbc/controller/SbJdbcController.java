@@ -14,41 +14,41 @@ import com.sbtutorial.sbjdbc.service.UserService;
 
 @RestController  
 public class SbJdbcController {
-	
-	 @Autowired
-	 UserService userService;
+
+	@Autowired
+	UserService userService;
 
 	@RequestMapping("/truncate")  
 	public String 
-		truncate(){  
+	truncate(){  
 		userService.truncateUser();
 		return "User Table Data Truncated Successfully";  
 	}
-	
+
 	@RequestMapping(value = "/users")
-	   public ResponseEntity<Object> 
-			getProduct() {
-	      return new ResponseEntity<>(userService.getUsers(), HttpStatus.OK);
-	   }
-	   @RequestMapping(value = "/users/{id}", method = RequestMethod.PUT)
-	   public ResponseEntity<Object> 
-	   		update(@PathVariable("id") String id, @RequestBody User user) {
-	      
-	     userService.updateUser(id, user);
-	      return new ResponseEntity<>("User is updated successfully", HttpStatus.OK);
-	   }
-	   
-	   @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
-	   public ResponseEntity<Object> 
-	   		delete(@PathVariable("id") String id) {
-	      userService.deleteUser(id);
-	      return new ResponseEntity<>("User is deleted successfully", HttpStatus.OK);
-	   }
-	
+	public ResponseEntity<Object> 
+	getProduct() {
+		return new ResponseEntity<>(userService.getUsers(), HttpStatus.OK);
+	}
+	@RequestMapping(value = "/users/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Object> 
+	update(@PathVariable("id") String id, @RequestBody User user) {
+
+		userService.updateUser(id, user);
+		return new ResponseEntity<>("User is updated successfully", HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<Object> 
+	delete(@PathVariable("id") String id) {
+		userService.deleteUser(id);
+		return new ResponseEntity<>("User is deleted successfully", HttpStatus.OK);
+	}
+
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
-	   public ResponseEntity<Object> 
-			create(@RequestBody User user) {
-	      userService.createUser(user);
-	      return new ResponseEntity<>("User is created successfully", HttpStatus.CREATED);
-	   }
+	public ResponseEntity<Object> 
+	create(@RequestBody User user) {
+		userService.createUser(user);
+		return new ResponseEntity<>("User is created successfully", HttpStatus.CREATED);
+	}
 }
