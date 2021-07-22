@@ -35,14 +35,14 @@ public class SbJdbcController {
 	   		update(@PathVariable("id") String id, @RequestBody User user) {
 	      
 	     userService.updateUser(id, user);
-	      return new ResponseEntity<>("User is updated successsfully", HttpStatus.OK);
+	      return new ResponseEntity<>("User is updated successfully", HttpStatus.OK);
 	   }
 	   
 	   @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
 	   public ResponseEntity<Object> 
 	   		delete(@PathVariable("id") String id) {
 	      userService.deleteUser(id);
-	      return new ResponseEntity<>("User is deleted successsfully", HttpStatus.OK);
+	      return new ResponseEntity<>("User is deleted successfully", HttpStatus.OK);
 	   }
 	
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
