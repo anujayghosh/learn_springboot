@@ -16,39 +16,39 @@ import com.sbtutorial.sbjpamysql.service.StudentService;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-	
-//	private final StudentRepository repository;
-////	Constructor Injection
-//	public StudentController(StudentRepository repository) {
-//	    this.repository = repository;
-//	}
-	
+
+	//	private final StudentRepository repository;
+	////	Constructor Injection
+	//	public StudentController(StudentRepository repository) {
+	//	    this.repository = repository;
+	//	}
+
 	@Autowired
 	StudentService studentService;
-	
+
 	@GetMapping
 	public Iterable<Student> getStudents() {
-	    return studentService.getStudents();
+		return studentService.getStudents();
 	}
-	
+
 	@GetMapping("/{id}")
 	public Student getStudent(@PathVariable Long id) {
-	    return studentService.getStudent(id);
+		return studentService.getStudent(id);
 	}   
 
 	@PostMapping
 	public Student addStudent(@RequestBody Student student) {
-	    return studentService.addStudent(student);
+		return studentService.addStudent(student);
 	} 
-	
+
 	@PutMapping("/{id}")
 	public Student updateStudent(@PathVariable Long id, @RequestBody Student student) {
-	    return studentService.updateStudent(id, student);
+		return studentService.updateStudent(id, student);
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void deleteStudent(@PathVariable Long id) {
-	    studentService.deleteStudent(id);
+		studentService.deleteStudent(id);
 	}
- 
+
 }
