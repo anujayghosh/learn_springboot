@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>  
 <head>  
 <meta charset="ISO-8859-1">  
-<title>Insert title here</title>  
+<title>Spring Boot JPA Demo</title>  
 </head>  
 <body>  
 <form action="addUser">  
