@@ -9,7 +9,7 @@ public class DependencyinjectionApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(DependencyinjectionApplication.class, args);
-		
+
 		Employee e1=ctx.getBean(Employee.class);
 		e1.display();
 	}
