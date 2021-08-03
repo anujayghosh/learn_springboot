@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"> Using this repository to record all implementation programs performed during Spring Boot Training.
+<p align="center"> Using this repository to record all implementation programs performed by me during Spring Boot Training.
   <br> 
   <b>Start Date:</b> 06/29/2021<br>
 </p>
