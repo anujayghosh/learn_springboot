@@ -7,7 +7,7 @@
 
 <div align="center">
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![Status](https://img.shields.io/badge/status-inactive-lightgrey)]() 
 
 </div>
 
@@ -16,6 +16,7 @@
 <p align="center"> Using this repository to record all implementation programs performed by me during Spring Boot Training.
   <br> 
   <b>Start Date:</b> 06/29/2021<br>
+  <b>End Date:</b> 08/03/2021<br>
 </p>
 
 ### ⛏️ Software
